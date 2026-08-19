@@ -66,8 +66,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # ── /login conversation ───────────────────────────────────────────────────────
 
-async def login_start(update: Update,
-                      context: ContextTypes.DEFAULT_TYPE) -> int:
+async def login_start(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> int:
     """Begin the login conversation – ask for email."""
     await update.message.reply_text(
         "📧 Please enter your Gmail address:",
